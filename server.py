@@ -1,5 +1,5 @@
 import socket
-from des_cli import encryption_large_text, decryption_large_text, generate_random_key
+from DES import encryption_large_text, decryption_large_text, generate_random_key
 from rsa import generate_rsa_keys, rsa_encrypt, rsa_decrypt
 
 def register_public_key(identifier, public_key):
@@ -24,7 +24,7 @@ def get_public_key(identifier):
 
 def server_program():
     host = socket.gethostname()
-    port = 5000
+    port = 5003
     encryption = encryption_large_text
     decryption = decryption_large_text
     randomkey = generate_random_key
